@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sleep 10
+
 xset s off
 xset -dpms
 
@@ -12,7 +14,7 @@ pdftoppm -png -y 140 -H 1000 -r 109 /tmp/info.pdf > /tmp/termine.png
 wkhtmltopdf --page-size A3 --margin-top 0 --minimum-font-size 20 \
  --user-style-sheet blog-override.css \
  'http://chaosdorf.de/' /tmp/news.pdf
-pdftoppm -png -y 260 -H 1000 -r 109 /tmp/news.pdf > /tmp/news.png
+pdftoppm -png -y 50 -H 1000 -r 109 /tmp/news.pdf > /tmp/news.png
 sleep 1h
 done
 ) &
@@ -20,8 +22,8 @@ done
 (
 while true; do
 feh --full-screen --slideshow-delay 30 --hide-pointer --cycle-once \
-'http://vrrf.finalrewind.org/Duesseldorf/Luisenstr.png?no_lines=10' \
 /tmp/termine.png \
-/tmp/news.png
+/tmp/news.png \
+'http://vrrf.finalrewind.org/Duesseldorf/Luisenstr.png?no_lines=10'
 done
 ) &
