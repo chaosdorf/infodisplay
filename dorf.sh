@@ -9,7 +9,7 @@ xset -dpms
 while true; do
 wkhtmltopdf --page-size A3 --margin-top 0 --minimum-font-size 20 \
  --user-style-sheet wiki-override.css \
- 'https://wiki.chaosdorf.de/Infodisplay' /tmp/info.pdf
+ 'https://wiki.chaosdorf.de/Infodisplay/Infodisplay' /tmp/info.pdf
 pdftoppm -png -y 140 -H 1000 -r 109 /tmp/info.pdf > /tmp/termine.png
 wkhtmltopdf --page-size A3 --margin-top 0 --minimum-font-size 20 \
  --user-style-sheet blog-override.css \
