@@ -21,9 +21,15 @@ done
 
 (
 while true; do
-feh --full-screen --slideshow-delay 30 --hide-pointer --cycle-once \
+feh --full-screen --slideshow-delay 25 --hide-pointer --cycle-once \
 /tmp/termine.png \
+'http://vrrf.finalrewind.org/Duesseldorf/Luisenstr.png?no_lines=10'
+feh --full-screen --slideshow-delay 25 --hide-pointer --cycle-once \
 /tmp/news.png \
 'http://vrrf.finalrewind.org/Duesseldorf/Luisenstr.png?no_lines=10'
+if [ -e /tmp/override.png ]; then
+feh --full-screen --slideshow-delay 25 --hide-pointer --cycle-once \
+/tmp/override.png
+fi
 done
 ) &
