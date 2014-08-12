@@ -15,7 +15,7 @@ wkhtmltopdf --page-size A3 --margin-top 0 --minimum-font-size 20 \
  --user-style-sheet blog-override.css \
  'http://chaosdorf.de/' /tmp/news.pdf
 pdftoppm -png -y 50 -H 1000 -r 109 /tmp/news.pdf > /tmp/news.png
-sleep 1h
+sleep 6h
 done
 ) &
 
